@@ -13,3 +13,5 @@ A commit is a way to take a snapshot of changes made. A good commit message make
 
 * What is a merge conflict?
 A merge conflict can occur when the same file has been altered in different ways on the branches to be merged
+
+I added these words
