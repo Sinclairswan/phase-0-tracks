@@ -1,0 +1,28 @@
+Briefly describe your understanding of what the browser does, including definitions of the following:
+client - the computer (local) that reaches the sever 
+server - the computer that stores the information that the client request
+render - the process that translates the server output in to readable content
+
+What is HTML?  In your answer, include definitions of the following:
+HTML stands for Hypertext markup language used for creating web pages.
+tag - begin and end an element
+element- part of a webpage
+node - any data set within a document
+attribute - additional elements that change a tag’s value
+block element - container that starts at the beginning of a line
+inline element - Changes made with in a line 
+
+Very briefly, explain the purpose of the following elements:
+head - part of the html file that hold the meta-data
+body - the space where the the content of the site 
+p - paragraph
+form - this tag encloses types of spaces where user can input information
+div - divides the body of a document
+span - a container for inline changes
+select - type of form that can gives multiple choice drop downs
+h2 - Second  largest heading for text
+ol - ordered list
+ul - un ordered bullet point list
+table - tag for creating a table
+tr - table row
+td - tag for data in a table 
