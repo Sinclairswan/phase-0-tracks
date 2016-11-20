@@ -9,14 +9,9 @@
 puts "What is your name?"
 fname = gets.chomp
 
-vamp_name =false
-if fname =="Drake cula"
-	vamp_name =true
-elsif fname == "Two Fangs"
-	vamp_name = true
-else
-		
-end
+
+
+
 
 #Compare name(INPUT) to database for "drake cula" and "Tu Fangs" -string
 #Flag match with message in display
@@ -27,6 +22,7 @@ age = gets.chomp.to_i
 puts "What year were you born?"
 birth = gets.chomp.to_i
 
+likes_garlic =false
 garlic = false 
 until garlic
 	
@@ -38,6 +34,7 @@ until garlic
 			garlic = true
 		elsif food == "n"
 			garlic = true
+			
 		else
 			puts "Plesase use 'Y' or 'N'."
 		end	
@@ -45,10 +42,10 @@ end
 
 health = false
 
-until health
+	until health
 
-puts "Would you like to enroll in the company healthplan (Y/N)"
-insurance = gets.chomp.to_s
+	puts "Would you like to enroll in the company healthplan (Y/N)"
+	insurance = gets.chomp.to_s
 # True or False  question
  #if insurance
 		if 	insurance == "y"
@@ -58,19 +55,86 @@ insurance = gets.chomp.to_s
 		else
 			puts "Plesase use 'Y' or 'N'."
 		end	
-end 	
+	end 	
 
 valid_age = false
 
-
-if age + birth = 2016
+	if (age + birth) == 2016
 
 	valid_age = true
-end
+	end
 
-
-	
+#
 
 
 # collected data=results
 #case comparison
+
+#Compare name(INPUT) to database for "drake cula" and "Tu Fangs" -string
+#Flag match with message in display
+
+vamp_name = false 
+vamp_status = false 
+
+	if fname == "Drake cula" || fname == "Tu Fangs".downcase
+		vamp_name = true
+		puts "Definitely a vampire"
+	end
+
+
+
+if garlic && valid_age && health && !vamp_name
+
+	#vamp_status = true
+	puts "Probably not a vampire"
+
+elsif !valid_age && garlic || health
+	puts "probably a vampire"
+		
+
+	elsif !(valid_age && garlic && health)
+	puts "Almost certainly a vampire"
+		
+	else
+	puts "results inconclusive"
+end
+		
+
+#	if valid_age && likes_garlic && health
+#		vamp_status = true
+#		puts "Probably not a vampire."
+
+	#elsif !(valid_age && likes_garlic) || health
+#	elsif valid_age ||likes_garlic && health
+
+#		puts "Almost certainly a vampire"
+
+#	elsif vamp_name 
+
+#		puts "Definitely a vampire."
+
+#	else
+#    puts "Results inconclusive."	
+		
+#end
+
+puts "Applicant name: #{fname}" 
+puts "Age: #{age}  " 
+puts "Born: #{birth}"
+
+if garlic
+	puts "Likes garlic! " 
+else
+	puts "Hates garlic"
+end
+
+	if health == true
+		puts "Wants insurance"
+	else
+		puts "Does not want insurance"
+	end
+
+
+
+
+
