@@ -1,0 +1,33 @@
+Elevator Algorithm
+
+Ask user "Going up or Going Down"
+If user selects "Going up" press Up call button
+If user selects "Going Down" press Down call button
+When door opens enter the elevator and rotate 180 degrees
+Ask user "Which floor are you going to"
+Select corresponding floor number and press that button
+When selected floor has been reached wait for door to open and then exit.
+
+Making coffee
+
+Identify coffee maker
+remove carafe and filter holder from base of coffee maker
+place on counter
+Identify filter box
+remove empty filter from box
+open empty filter 
+place filter in filter holder
+Identify coffee beans
+open coffee bean container
+fill coffee scope with beans
+remove coffee grinder lid from grinder
+place beans from container in to coffee grinder
+place lid over beans in grinder and press button for 30 secs
+remove coffee grinder lid from grinder
+empty ground coffee into to filter
+place carafe and and filter holder into to base of coffee maker
+Lift lid of coffee maker
+Fill coffee maker with cold water until top water mark
+close lid of coffee maker
+press "ON" button on coffee maker
+Select favorite mug and enjoy coffee 
