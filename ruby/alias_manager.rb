@@ -12,12 +12,24 @@ until original_name =="quit"
 		original_name = gets.chomp!
 
 		 input_name = original_name.downcase.split.reverse
+
 			input_name.each do |names| 
 		  		names= names.tr_s!('bcdfghjklmnpqrstvwxyz','cdfghjklmnpqrstvwxyb')
-	  		names.tr_s!("aeiou","eioua")
-		end
+	  				names.tr_s!("aeiou","eioua")
+			end
 		
-	 		input_name.each do |encrpyt|
-	   			puts "#{encrpyt.capitalize}"
-	 end
+	 			code_name =	input_name.each do |encrpyt|
+	   				puts "#{encrpyt.capitalize}"
+	   	
+	 			end
+	 				name_info = {
+	 					"Real name" => original_name,
+	 					"Alias" => code_name }
+
 end
+
+puts name_info
+#name_info = {
+			#original_name => code_name 
+			#}
+
