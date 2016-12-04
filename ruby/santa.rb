@@ -1,14 +1,17 @@
 
 class Santa
-	def initialize (gender, ethnicity)
-		@gender = "none"
-		@ethnicity = ethnicity
+	attr_reader :reindeer_ranking, :age, :ethnicity
+	attr_accessor :gender
+
+	def initialize(names) 
+		@gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+		@ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 		@reindeer_ranking = [
 			"Rudolph", "Dasher", "Dancer", 
 			"Prancer", "Vixen", "Comet", 
 			"Cupid", "Donner", "Blitzen"
 			]
-		@age = 0
+		@age = (1..140).to_a
 		puts "intializing Santa instance..."	
 	end
 
@@ -26,46 +29,62 @@ class Santa
 	end
 
 	def celebrate_birthday
-		@age + 1
+		@age = @age +1
 	end
 
 	def get_mad_at(reindeer)
 		#@reindeer_ranking.slice(0)
 		@reindeer_ranking.delete("#{reindeer}")	
 		@reindeer_ranking.insert(-1,"#{reindeer}")
+		puts "Go to the back of the line #{reindeer}!"
 	end
-	def reindeer
-		@reindeer_ranking 	
-	end
-	def gender=(new_gender)
-		@gender = new_gender
-	end
+	# # getter
+	# def reindeer
+	# 	@reindeer_ranking 	
+	# end
+	# #setter
+	# def gender=(new_gender)
+	# 	@gender = new_gender
+	# end
 
-
-	def age
-		@age
-	end
-	def ethnicity
-		@ethnicity
-	end
+	# #getter
+	# def age
+	# 	@age
+	# end
+	# #getter
+	# def ethnicity
+	# 	@ethnicity
+	# end
 
 	def about
-		puts "Santa is #{@age} years old, a #{@gender}, gets mad at #{@reindeer_ranking[-1]}"
+		puts "Santa is #{@age.sample} years old,#{@ethnicity.sample}, #{@gender.sample}, that gets mad at #{@reindeer_ranking[-1]}"
 	end
 
 end
 
-santas = Santa.new("none","black")
-santas.speak
-santas.eat_milk_and_cookies("peanut butter")
-#santas.reindeer
-santas.get_mad_at("Vixen")
-puts santas.reindeer
-puts santas.age 
-puts santas.celebrate_birthday
-puts santas.gender = "female"
-puts santas.ethnicity
-puts santas.about
+names = (1..100).to_a
+santas = []
+
+names.each do |names|
+	#puts "Creating a Santa named #{names} ..."
+	santas << Santa.new(names)
+	#puts "There are now #{santas.length} Santa instances in the array"
+  	#puts "----"
+end
+
+#santas = Santa.new
+
+# santas.speak
+# santas.eat_milk_and_cookies("peanut butter")
+# #santas.reindeer
+#puts santas.get_mad_at("Vixen")
+# puts santas.reindeer_ranking
+#puts santas.age 
+# puts santas.celebrate_birthday
+# puts santas.gender = "female"
+santas.each do |santas|
+   santas.about
+end
 
 
 
