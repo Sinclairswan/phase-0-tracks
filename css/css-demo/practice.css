@@ -1,14 +1,23 @@
-#contact-info{font-size: .8em;}
+#contact-info { font-size: .8em;
+ 				}
+.job {border-radius: 5px;
+	  background-color: #e9e5dc;
+	  margin-top: 30px;
+	  padding: 10px;
+}
 
-.job{background-color: #e9e5dc;
-	 border-radius:10px;
-	 margin-top: 10px;
-	 margin-bottom: 10px;
-	 padding:5px 5px 5px 10px;}
+.list {font-size: .8em;}
 
-.list{font-size:.8em;}
+li:first-child {color:red;}
+/* Release 2
 
-.list::after{content:"best job!";
-			 font-style: italic;}
+What does the "Cascading" part of Cascading Style Sheets mean? 
+When there is a conflict between two CSS rules that select the same element, 
+how does your browser decide which rule to use?
 
-.volunteer-gig > h3 {font-family: times new roman;}
+The order in which changes to the element or elements apply.
+
+What is a pseudoselector?
+
+Adds a special state to an element where the style is changes based on how it's selected. Hovering over a link or visting a link.
+
