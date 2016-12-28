@@ -13,14 +13,8 @@ applicants =gets.chomp.to_i
 
 applicants.times do
 
-
 		puts "What is your name?"
 		fname = gets.chomp
-
-
-
-
-
 		#Compare name(INPUT) to database for "drake cula" and "Tu Fangs" -string
 		#Flag match with message in display
 		puts "How old are you?"
@@ -71,10 +65,6 @@ applicants.times do
 
 			valid_age = true
 			end
-
-		#
-
-
 		# collected data=results
 		#case comparison
 puts "Applicant name: #{fname}" 
@@ -95,38 +85,24 @@ puts "Applicant name: #{fname}"
 				end
 #Compare name(INPUT) to database for "drake cula" and "Tu Fangs" -string
 #Flag match with message in display
-
 		vamp_name = false 
 		vamp_status = false 
-
 			if fname == "Drake cula" || fname == "Tu Fangs".downcase
 				vamp_name = true
 				puts "Definitely a vampire"
 			end
 
-
-
 		if garlic && valid_age && health && !vamp_name
-
 			#vamp_status = true
-			puts "Probably not a vampire"
-
+				puts "Probably not a vampire"
 			elsif !valid_age && garlic || health
-			puts "Probably a vampire"
-				
-
+				puts "Probably a vampire"
 			elsif !(valid_age && garlic && health)
-			puts "Almost certainly a vampire"
-				
+				puts "Almost certainly a vampire"
 			else
-			puts "results inconclusive"
+				puts "results inconclusive"
 		end
 				
-
-		
-
-		
-
 		puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 end
 	
