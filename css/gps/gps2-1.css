@@ -1,49 +1,32 @@
-body {
-  background-image: url("https://octodex.github.com/images/octocat-de-los-muertos.jpg");
-}
 header {
-  border:1px solid black;
-  padding:10px;
-  font-family:"Helvetica";
-}
-header, footer {
- background-color:#add8e6; 
+        font-family:Arial;
+        background-color:pink;
+        margin: 3px;
+        padding: 3px;
+        border:solid 1px black;
+  }
+  h2{
+    font-family:cursive;
+  }
   
-  
-}
-
-.column-1 h2{
-  color:orange
-}
-
-
-.column-1 {
-  display:inline-block;
-  width:45%;
-  margin:5px;
-  border:1px solid black;
-  padding:10px;
-  vertical-align:top;
-  background-color:#ade6d8;
-}
-
-.column-2 {
-  display:inline-block;
-  width:45%;
-  margin:5px;
-  border:1px solid black;
-  padding:10px;
-  vertical-align:top;
-  background-color:#adbce6
-}
-
-a:hover{
-  color:pink;
-}
-
-footer{
-  font-family:"Helvetica";
-  border:1px solid black;
-  padding:10px;
-  margin-top:10px;
-}
+ .column-1 {
+   display:inline-block;
+   width:45%;
+   padding: 10px;
+   margin-right: 5px;
+   
+ } 
+  .column-2 {
+   display:inline-block;
+   vertical-align: top;
+   width: 45%;
+   padding: 10px;
+ } 
+ footer{
+   font-family:Arial;
+   background-color:pink;
+   margin-top:5px;
+   text-align:center;
+   border:solid 1px black;
+ }
+ 
