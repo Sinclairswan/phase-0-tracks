@@ -2,28 +2,28 @@
 #INPUT ask user for input -String
 #shift letters of string to the next position
 #OUTPUT letters shifted -String . lowercase
-def encrypt_loop(encrypt)
+def encrypt_loop(input)
     index = 0
-    while index < encrypt.length
-        if encrypt[index] != " "
-            encrypt[index] = encrypt[index].next
+    while index < input.length
+        if input[index] != " "
+          input[index].next
             index += 1
         else
             index+=1
         end
     end
-    p encrypt
+    p input
 end
 
-def decrypt_loop(decrypt)
+def decrypt_loop(input)
     new_string = ""
     i = 0
     #iderate through the String
-    while i < decrypt.length
-        if decrypt[i] != " "
+    while i < input.length
+        if input[i] != " "
             # get the index of the alphabet String
             str ="abcdefghijklmnopqrstuvwxyz"
-            new_value = str.index(decrypt[i])
+            new_value = str.index(input[i])
             #change to the new letter
             new_value =new_value -1
             str[new_value]
@@ -46,12 +46,12 @@ puts "Would you like to encrypt or decrypt?"
 if answer == "encrypt"
 	 puts "What would you like to encrypt?"
 	 encrypt =gets.chomp
-	 encrypt_loop(encrypt)
+	 encrypt_loop(input)
 
 	 elsif answer == "decrypt" 
 	 	puts "what would you like to decrypt?"
 	 	decrypt = gets.chomp
-	 	decrypt_loop(decrypt)
+	 	decrypt_loop(input)
 # If invalid answer "bye, bye"
 	 else
 	 	puts "Sorry, bye"
