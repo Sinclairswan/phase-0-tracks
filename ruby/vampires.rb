@@ -3,7 +3,7 @@
 #Ask for user's birth year
 #until user enters valid input
 #Invite them to eat garlic bread
-#Ask user to enroll in healthplan
+#Ask user to enroll in health care plan
 
 
 applicants = 0
