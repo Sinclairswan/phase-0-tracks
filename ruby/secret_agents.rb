@@ -1,3 +1,5 @@
+
+
 # # Encrypt method
 # #INPUT ask user for input -String
 # #shift letters of string to the next position
@@ -56,6 +58,7 @@ end
  	 else
  	 	puts "Sorry, bye"
  end
+
 
 	 	
 	

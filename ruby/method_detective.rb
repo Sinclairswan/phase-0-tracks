@@ -50,7 +50,7 @@
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 "z".ord
-#ASCII character number
+#ASCII character numbers
 
 # "How many times does the letter 'a' appear in this string?".<???>
 # => 4
