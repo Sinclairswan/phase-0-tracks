@@ -1,4 +1,4 @@
-thanksgiving = { 
+pot_luck = { 
 	meals: {
 		main_courses: {
 			sinclair: 'turkey',
@@ -29,4 +29,4 @@ thanksgiving = {
 	}
 }
 
-puts thanksgiving[:meals][:drinks][1][0]
+puts pot_luck[:meals][:drinks][1][0]
