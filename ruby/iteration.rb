@@ -1,105 +1,89 @@
-def whats_up
-	puts "Hey, what's up!"
-	3.times { yield }
-	puts "Cool Beans"
+divider = "\n------------------------\n"
+#=============
+# Release 0: Explore Blocks
+#=============
+def fib(num)
+    array = [0,1,1,2,3,5]
+    num.times do |i|
+        array << array[-1] + array[-2]
+        p array[i]
+    end
 end
 
-whats_up { puts "stuff" }
+fib(100)
 
+puts divider
 
-thanksgivingArr = ["turkey", "stuffing", "cranberry"]
+#=============
+# Release 1: Use each, map, and map!
+#=============
+animals_array = ['cat', 'dog', 'fish', 'bird', 'bear', 'rabbit']
+animals_hash = {
+    1 => 'cat',
+    2 => 'dog',
+    3 => 'fish',
+    4 => 'bird',
+    5 => 'bear',
+    6 => 'rabbit'
+}
 
-potluckHash = { "Bob" => "potatoes", "Sally" => "pie", "Rob" => "sauerkraut" }
+animals_array.each {|animal| puts animal.upcase}
+puts divider
+animals_array.map! {|animal| animal.capitalize }
+puts animals_array
+puts divider
+animals_hash.each {|key,value| puts value.capitalize}
 
-puts "Original: "
-p thanksgivingArr
+puts divider
 
-thanksgivingArr.each do |thanksgiving|
-	puts thanksgiving
+#=============
+# Release 2: Use the Documentation
+# .collect
+#=============
+def numbers_method
+    num_array = [1,2,3,4,5,6,7,8,9,10]
+
+    num_hash = {
+        1 => 'one',
+        2 => 'two',
+        3 => 'three',
+        4 => "four",
+        5 => "five",
+        6 => "six",
+        7 => "seven",
+        8 => "eight"
+    }
+
+    puts "Original: #{num_array}"
+    puts "Modified: #{yield num_array}"
+    puts "------------------------"
 end
 
-puts "After .each call: "
-p thanksgivingArr
+###### ARRAY METHODS ##########
+puts divider + "Array-1 Method: Delete num less than 5."
+numbers_method { |num_array| num_array.delete_if {|num| num < 5} }
+
+puts divider + "Array-2 Method: Delete num less or greater than 5."
+numbers_method { |num_array| num_array.keep_if {|num| num == 5 }}
+
+puts divider + "Array-3 Method: Filter evens"
+numbers_method { |num_array| num_array.delete_if {|num| num.odd? }}
+
+puts divider + "Array-4 Method: Loop till false"
+numbers_method { |num_array| num_array.delete_if {|num| num > 5 }}
+####################
 
 
-puts "Original: "
-p thanksgivingArr
+###### HASH METHODS ##########
+puts divider + "Hash-1 Method: Delete num less than 5."
+numbers_method { |num_hash| num_hash.delete_if {|key, value| key < 5} }
 
-turkeyArr = thanksgivingArr.map do |thanksgiving|
-	puts thanksgiving
-	thanksgiving.next
-end
+puts divider + "Hash-2 Method: Delete num less or greater than 5."
+numbers_method { |num_hash| num_hash.keep_if {|key, value| key == 5 }}
 
-puts "After .map call: "
-p thanksgivingArr
-p turkeyArr
+puts divider + "Hash-3 Method: Filter evens"
+numbers_method { |num_hash| num_hash.delete_if {|key, value| key.odd? }}
 
-puts "Original: "
-p thanksgivingArr
-
-thanksgivingArr.map! do |thanksgiving|
-	puts thanksgiving 
-	thanksgiving.reverse
-end
-
-puts "After .map! call "
-p thanksgivingArr
-
-
-puts "Original: "
-p potluckHash
-
-potluckHash.each do |name, food|
-	puts name
-	puts food
-end
-
-puts "After .each call: "
-p potluckHash
-
-puts "Original: "
-p potluckHash
-
-potluck2 = potluckHash.map do |name, food|
-	puts name
-	puts food
-end
-
-puts "After .map call: "
-p potluckHash
-p potluck2
-
-petsArr = ["dog", "cat", "ferret"]
-
-numArr = [3, 4, 5, 9, 10, 21]
-
-ageHash = { "Bob" => "25", "Sally" => "32", "Rob" => "16" }
-
-def arrHashMethod
-	puts "beginning"
-	p yield
-	puts "end"
-end
-
-arrHashMethod { numArr.delete_if {|numbers| numbers < 5} }
-
-numArr = [3, 4, 5, 9, 10, 21]
-arrHashMethod { numArr.keep_if {|numbers| numbers <5} }
-
-numArr = [3, 4, 5, 9, 10, 21]
-arrHashMethod { numArr.keep_if {|numbers| numbers % 2 == 0 }}
-
-numArr = [3, 4, 5, 9, 10, 21]
-arrHashMethod { numArr.drop(3) }
-
-
-arrHashMethod { ageHash.delete_if {|name, age| age.to_i < 20} }
-
-ageHash = { "Bob" => "25", "Sally" => "32", "Rob" => "16" }
-arrHashMethod { ageHash.keep_if {|name, age| age.to_i > 30} }
-
-ageHash = { "Bob" => "25", "Sally" => "32", "Rob" => "16" }
-arrHashMethod { ageHash.keep_if {|name, age| name.length >= 5 }}
-
-ageHash = { "Bob" => "25", "Sally" => "32", "Rob" => "16" }
-arrHashMethod { ageHash.drop(2) }
+puts divider + "Hash-4 Method: Loop till false"
+numbers_method { |num_hash| num_hash.delete_if {|key, value| key > 5 }}
+####################
