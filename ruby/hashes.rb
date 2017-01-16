@@ -52,7 +52,7 @@ puts "Ombre is...\n a. fierce \n b.So last season \n c.Practically medieval in i
 	puts "add field value"
 		new_value = gets.chomp
 end
-#add update value in to hash
+#add update value into hash
 answers [update]= new_value
 
  answers.each{|key, value| puts "#{key}: #{value}" }
