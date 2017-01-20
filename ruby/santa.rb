@@ -1,3 +1,4 @@
+
 class Santa
 	attr_reader :reindeer_ranking, :age, :ethnicity
 	attr_accessor :gender
@@ -46,4 +47,5 @@ santas = []
 santas << Santa.new(names)
 
 santas.each {|santa| santa.about}
+
 
