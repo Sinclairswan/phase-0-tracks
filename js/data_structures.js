@@ -1,35 +1,31 @@
-var colors = ["blue", "green", "red", "orange"];
-var horse_names = ["Black Beauty", "Secrtariat", "Seabiscuit", "My Little Pony"];
+var colors = ["blue", "orange", "red" , "yellow"];
+var horseNames = ["buster","ed","shadowfax","artax"];
 
-colors.push("purple");
-horse_names.push("Mr. Ed");
+colors.push("green");
+horseNames.push("bob");
 
+console.log(colors);
+console.log(horseNames);
 
-var assignments = {};
-for(var i=0, l=horse_names.length; i<l; i++){
-  assignments [horse_names[i]] = colors[i];
-}
+var horseList = {}
 
-assignments["Black Beauty"];
+for (var i = 0; i < colors.length; i++) {
+	 horseList[colors[i]] = horseNames[i];
+	  }
 
-console.log(assignments)
+console.log(horseList)
 
+function Car(make, model, year) {
 
+	console.log("Brand new car:", this);
+	this.make = make;
+	this.model = model;
+	this.year = year;
+	this.go = function() {console.log("vroom");};
 
-var car = {model: 'civic', make: 'honda', year: 2016}
+	console.log("Your car is ready!");
+}	
 
-function Car(model, make, year) {
-	console.log ("The brand new:", this);
-
-this.model = model;
-this.make = make;
-this.year = year;
-
-this.vroom = function() { console.log("Vroom,vroom!"); };
-
-}
-
-var newCar = new Car ("crv", "honda", 2012)
-console.log(car)
-console.log(newCar)
-newCar.vroom()
+var firstCar = new Car("honda", "civic", 2017);
+console.log(firstCar);
+firstCar.go();
