@@ -1,67 +1,76 @@
+# Release 0
+
 class Puppy
 
-def initialize
-	puts "Initializing new puppy instance ..."
-end
+  def initialize
+  	puts "Initializing new puppy instance..."
+  end
 
   def fetch(toy)
     puts "I brought back the #{toy}!"
     toy
   end
 
-def speak(integer)
-	integer.times do
-	puts "Woof!"
-	end
-	end
+  def speak(number)
+  	(number).times do |i|
+  	puts "Woof!"
+  	end 
+  end
 
-def roll_over
-	puts "roll over"
+  def roll_over
+  	puts "*rolls over*"
+  end
+
+  def dog_years(human_age)
+  	puts human_age * 7 
+  end
+
+  def sit
+  	puts "*sitting*"
+  end
 end
 
-def dog_years(age)
-	puts age * 7
-end
+# DRIVER CODE
 
-def play_dead
-	puts "play dead"
-end
-end
+fido = Puppy.new
+fido.fetch("bone")
+fido.speak(6)
+fido.roll_over
+fido.dog_years(8)
+fido.sit
 
-spot = Puppy.new
-spot.fetch("ball")
+class Kittens
 
-spot.speak(3)
-spot.roll_over
-spot.dog_years(5)
-spot.play_dead
+  def initialize
+    puts "creating kittens!"
+  end
 
+  def purr 
+    puts "purr, purr, purr"
+  end
 
-class Student
+  def licks
+    puts 'licks'
+  end
 
-	def initialize
-		puts "Initialize Student..."
-	end
+  def meows
+    puts 'meow.'
+  end
 
-	def test(number)
-		puts "passed #{number}"
-	end
-
-	def assignments(integer)
-		puts "Handed in #{integer} assignments"
-	end
-
-end
-
-def store_instance(student,number)
-	number{student}
-	number
-end
-
-def print_list(number)
-	number.each{|student,number| puts "these are your grades"}
 end
 
 
-puts print_list
+kitten_array = 50.times.collect {Kittens.new}
+puts kitten_array
+
+kitten_array.each {|k| k.purr}
+
+kitten_array.each {|k| k.licks}
+
+kitten_array.each {|k| k.meows}
+
+
+
+
+
 

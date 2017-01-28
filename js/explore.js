@@ -1,5 +1,5 @@
 // Function reverse() takes the string inside () and returns the string in reverse order
-// Turn a string into an array of characters (split?)
+// Turn a string into an array of characters(split?)
 // Reverse order of array
 // Turn array back into string
 // return string
@@ -22,6 +22,7 @@ if ((pleasework =1)) {
 } else {
 	console.log(result);
 }
+
 
 console.log(reverse("hello"));
 console.log(reverse("abc"));
