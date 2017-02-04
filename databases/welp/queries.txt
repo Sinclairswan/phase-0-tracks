@@ -1,0 +1,35 @@
+Question 2
+sqlite> SELECT * FROM reviews
+   ...> LEFT JOIN business ON reviews.business_id = business.id
+   ...> LEFT JOIN users ON reviews.users_id = users.id
+   ...> ;
+1|5|Had a wonderful experience!|3|3|3|Pots & Pilates|3|Patsy|Patel
+2|1|Found a cockroach in the mashed potatoes|1|2|1|Fred's Fried Chicken|2|Benjamin|Bradford
+3|3|Could have had more flavors|2|1|2|Agtha's Ice Cream|1|Daisy|Donalds
+sqlite> 
+
+Question 3
+sqlite> SELECT
+   ...> reviews.id AS reviews_id,
+   ...> reviews.stars AS reviews_stars,
+   ...> reviews.comments AS reviews_comments,
+   ...> business.name AS business_name,
+   ...> users.last_name AS users_last_name,
+   ...> users.first_name AS users_first_name
+   ...> FROM
+   ...> reviews
+   ...> LEFT JOIN users ON reviews.users_id = users.id
+   ...> LEFT JOIN business ON reviews.business_id = business.id
+   ...> ;
+1|5|Had a wonderful experience!|Pots & Pilates|Patel|Patsy
+2|1|Found a cockroach in the mashed potatoes|Fred's Fried Chicken|Bradford|Benjamin
+3|3|Could have had more flavors|Agtha's Ice Cream|Donalds|Daisy
+sqlite> 
+
+Question 4
+sqlite> SELECT * FROM reviews
+   ...> LEFT JOIN users ON reviews.users_id = users.id
+   ...> LEFT JOIN business ON reviews.business_id = business.id
+   ...> WHERE name="Fred's Fried Chicken";
+2|1|Found a cockroach in the mashed potatoes|1|2|2|Benjamin|Bradford|1|Fred's Fried Chicken
+sqlite> 
