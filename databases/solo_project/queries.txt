@@ -1,0 +1,102 @@
+Release 2
+
+1.Display the information in one table (either table is fine).
+
+sqlite> SELECT * FROM music;
+1|Mirror in the Bathroom|The English Beat|1
+2|Watching the Detectives|Elvis Costello|1
+3|Ghost Town|The Specials|1
+4|Sorrow|Bad Relgion|2
+5|Time Bomb|Rancid|2
+6|Bro Hymn|Pennywise|2
+7|Linoleum|NOFX|3
+8|Hope|Decendents|3
+9|This is the End|Anti-Flag|3
+
+2 Update an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> UPDATE music SET song = "Ruby Soho" WHERE artist = "Rancid";
+sqlite> SELECT * FROM music;
+1|Mirror in the Bathroom|The English Beat|1
+2|Watching the Detectives|Elvis Costello|1
+3|Ghost Town|The Specials|1
+4|Sorrow|Bad Relgion|2
+5|Ruby Soho|Rancid|2
+6|Bro Hymn|Pennywise|2
+7|Linoleum|NOFX|3
+8|Hope|Decendents|3
+9|This is the End|Anti-Flag|3
+
+3.Display the information in both tables using one query.
+
+sqlite> SELECT * FROM music, labels;
+1|Mirror in the Bathroom|The English Beat|1|1|2 Tone
+1|Mirror in the Bathroom|The English Beat|1|2|Epitaph
+1|Mirror in the Bathroom|The English Beat|1|3|Fat Wreck Chords
+2|Watching the Detectives|Elvis Costello|1|1|2 Tone
+2|Watching the Detectives|Elvis Costello|1|2|Epitaph
+2|Watching the Detectives|Elvis Costello|1|3|Fat Wreck Chords
+3|Ghost Town|The Specials|1|1|2 Tone
+3|Ghost Town|The Specials|1|2|Epitaph
+3|Ghost Town|The Specials|1|3|Fat Wreck Chords
+4|Sorrow|Bad Relgion|2|1|2 Tone
+4|Sorrow|Bad Relgion|2|2|Epitaph
+4|Sorrow|Bad Relgion|2|3|Fat Wreck Chords
+5|Ruby Soho|Rancid|2|1|2 Tone
+5|Ruby Soho|Rancid|2|2|Epitaph
+5|Ruby Soho|Rancid|2|3|Fat Wreck Chords
+6|Bro Hymn|Pennywise|2|1|2 Tone
+6|Bro Hymn|Pennywise|2|2|Epitaph
+6|Bro Hymn|Pennywise|2|3|Fat Wreck Chords
+7|Linoleum|NOFX|3|1|2 Tone
+7|Linoleum|NOFX|3|2|Epitaph
+7|Linoleum|NOFX|3|3|Fat Wreck Chords
+8|Hope|Decendents|3|1|2 Tone
+8|Hope|Decendents|3|2|Epitaph
+8|Hope|Decendents|3|3|Fat Wreck Chords
+9|This is the End|Anti-Flag|3|1|2 Tone
+9|This is the End|Anti-Flag|3|2|Epitaph
+9|This is the End|Anti-Flag|3|3|Fat Wreck Chords
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT artist,label FROM music, labels;
+The English Beat|2 Tone
+The English Beat|Epitaph
+The English Beat|Fat Wreck Chords
+Elvis Costello|2 Tone
+Elvis Costello|Epitaph
+Elvis Costello|Fat Wreck Chords
+The Specials|2 Tone
+The Specials|Epitaph
+The Specials|Fat Wreck Chords
+Bad Relgion|2 Tone
+Bad Relgion|Epitaph
+Bad Relgion|Fat Wreck Chords
+Rancid|2 Tone
+Rancid|Epitaph
+Rancid|Fat Wreck Chords
+Pennywise|2 Tone
+Pennywise|Epitaph
+Pennywise|Fat Wreck Chords
+NOFX|2 Tone
+NOFX|Epitaph
+NOFX|Fat Wreck Chords
+Decendents|2 Tone
+Decendents|Epitaph
+Decendents|Fat Wreck Chords
+Anti-Flag|2 Tone
+Anti-Flag|Epitaph
+Anti-Flag|Fat Wreck Chords
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> SELECT * FROM music;
+1|Mirror in the Bathroom|The English Beat|1
+2|Watching the Detectives|Elvis Costello|1
+3|Ghost Town|The Specials|1
+4|Sorrow|Bad Relgion|2
+5|Ruby Soho|Rancid|2
+7|Linoleum|NOFX|3
+8|Hope|Decendents|3
+9|This is the End|Anti-Flag|3
