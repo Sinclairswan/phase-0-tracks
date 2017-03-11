@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SinclairSwan</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+</head>
+</head>
+<body>
+  <div id= "menu">
+    <ul id= "nav">
+       <li> <a href="index.html"> HOME </a> </li>
+       <li> <a href="bio.html"> ABOUT </a> </li>
+       <li> <a href="projects.html"> WORK </a> </li>
+       <li> <a href="contact.html"> CONTACT </a> </li>
+    </ul>
+  </div>    
+  <div id= "featured">
+    <h1>Current project...</h1>
+    <p><i>Lorem ipsum dolor sit amet</i>, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <div id= "updates"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</br>
+  </div>
+    <footer>
+      <ul id= "social">
+      	<li> <a href="https://www.facebook.com/sinclair.swan">Facebook </a> </li>
+      	<li> <a href="https://vimeo.com/user1384275">Twiter </a> </li>
+      	<li> <a href="https://www.linkedin.com/in/sinclair-swan-4665b59b">LinkedIN </a> </li>
+      	<li> <a href="https://vimeo.com/user1384275">Vimeo </a> </li>
+      </ul>
+    </footer>
+      <script src="event_listener.js"></script>
+      <script type="text/javascript">
+        
+        $(document).ready(function() {
+          $("#featured").css("width", 300);
+          $("#menu").css("margin", "auto");
+          $("#updates").css("background-color","#9b534d");
+          $("footer").css("border-color","black");
+          $("footer").css("border",2);
+
+          $("#nav").css("float","right");
+          $("#social").css("color", "yellow");
+          $("#social").css("float", "right");
+          $("#updates").css("float", "left");
+          $("#updates").css("width", 300);
+          $("p:has(i)").before("<p id='before_p'> click here </p>");
+
+          $("#before_p").click(function() {
+          $(this).replaceWith('<p> Lorem Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>');
+           });
+          $("#updates").click(function() {
+          $(this).hide();
+        });
+
+
+
+
+        });
+
+
+
+      </script>
+
+</body>
+</html>
