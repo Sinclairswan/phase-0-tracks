@@ -33,6 +33,7 @@ get '/students' do
     response << "Name: #{student['name']}<br>"
     response << "Age: #{student['age']}<br>"
     response << "Campus: #{student['campus']}<br><br>"
+    response << "Address: #{student['address']}<br>"
   end
   response
 end
@@ -41,6 +42,34 @@ end
 # a particular student
 
 get '/students/:id' do
-  student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
+  student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])
   student.to_s
+end
+
+get '/contact/' do
+  "1445 lakeside drive, Oakland,CA 94610"
+end
+
+get '/great_job/' do
+  name = params[:name]
+  if name
+  "Good job #{name}!"
+  else
+  "Good job!"
+  end
+
+end
+
+get '/:first_int/plus/:second_int' do
+  f_int = params[:first_int]
+  s_int = params[:second_int]
+
+  "#{f_int} plus #{s_int} equals  #{f_int.to_i + s_int.to_i}"
+end
+
+get '/students/:campus' do
+
+  student = db.execute("SELECT NAME FROM students WHERE campus=?",[params[:campus]])[0]
+  student.to_s
+
 end
